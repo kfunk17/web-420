@@ -1,3 +1,13 @@
+/*
+============================================
+; Author: Richard Krasso
+; Modified by: Karie Funk
+; Title: API Gateway
+; Date: 10/27/2019
+; Description: index.js
+;===========================================
+*/
+
 var express = require('express');
 var router = express.Router();
 

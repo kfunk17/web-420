@@ -16,10 +16,17 @@ var express = require('express');
 var router = express.Router();
 var auth_controller = require('../controllers/authController');
 
-router.post('/auth/login', auth_controller.user_login);
+// POST request to register a user
 router.post('/auth/register', auth_controller.user_register);
 
-router.get('/auth/token', auth_controller.user_token);
+// POST request to login a user
+router.post('/auth/login', auth_controller.user_login);
+
+// POST request to logout a user
 router.get('/auth/logout', auth_controller.user_logout);
 
+// GET request to verify user token
+router.get('/auth/token', auth_controller.user_token);
+
+// Make the module available for other modules to require
 module.exports = router;
